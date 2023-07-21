@@ -9,7 +9,6 @@ function checarEnter(event) {
 }
 
 function newMensage () {
-    //Clona o balão de mensagem
     let mensage = containerNewMensage.cloneNode(true);
    
     var dataAtual = new Date();
@@ -23,6 +22,10 @@ function newMensage () {
         mensage.querySelector('.chat-window__give-time').innerHTML = horaAtual;
 
         chatWindow.appendChild(mensage);
+
+        let newMensageSound = document.querySelector('.newMensage__sound');
+        newMensageSound.play();
+
         inputMensage.value = '';
 
     }
