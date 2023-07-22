@@ -3,8 +3,7 @@ let containerNewMensageGive = document.querySelector('.chat-window__give');
 let containerNewMensageRecive = document.querySelector('.chat-window__recive');
 let chatWindow = document.querySelector('.chat__window');
 
-const socket = new WebSocket("ws://localhost:8080/ws");
-
+const socket = new WebSocket("ws://websocket-java-production.up.railway.app/ws");
 
 socket.onmessage = function (event) {
     let mensageGive = containerNewMensageGive.cloneNode(true);
